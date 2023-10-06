@@ -1,12 +1,33 @@
 {
-  "name": "Front-end-cli",
+  "name": "jeffery-cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "type": "module",
+  "bin": {
+    "create-jeffery": "index.js"
   },
+  "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "JefferyXZF",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.3",
+    "@types/minimist": "^1.2.3",
+    "@types/node": "^20.8.2",
+    "@types/prompts": "^2.4.5",
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.8.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0"
+  }
 }
